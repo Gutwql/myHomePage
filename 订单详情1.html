@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情1</title>
+
+    <style type="text/css">
+        /* reset */
+        html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+        header,footer,section,article,aside,nav,address,figure,figcaption,menu,details{display:block;}
+        table{border-collapse:collapse;border-spacing:0;}
+        caption,th{text-align:left;font-weight:normal;}
+        html,body,fieldset,img,iframe,abbr{border:0;}
+        i,cite,em,var,address,dfn{font-style:normal;}
+        [hidefocus],summary{outline:0;}
+        li{list-style:none;}
+        h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+        sup,sub{font-size:83%;}
+        pre,code,kbd,samp{font-family:inherit;}
+        q:before,q:after{content:none;}
+        textarea{overflow:auto;resize:none;}
+        label,summary{cursor:default;}
+        a,button{cursor:pointer;}
+        h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+        del,ins,u,s,a,a:hover{text-decoration:none;}
+        body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+        body{background:rgb(250,250,250);font-family: "Microsoft YaHei";}
+        a,a:hover{color:#333;}
+        li{text-align: right;display:inline-table;}
+        .input{background-color: transparent;
+            border: none;
+            border-bottom:#333 solid 1px;
+            outline: none;
+            text-align: left;
+            width: 240px;
+            font-size: 14px;
+            color: #666;
+            font-weight: 100;
+            margin-left: 2px;}
+        div.colon{text-align:right;width:140px;display:inline-block;}
+        h3{color: #ff1a30;width: auto;margin: 5px 0;font-size: 16px;font-weight: 500;}
+
+        /*order-items*/
+        /*order-top*/
+        .order-items{background-color: #fff;max-width: 1150px;margin:10px auto;color:#333;font-size: 14px;}
+        .order-top{padding-top: 1px;}
+        .order-items h1{color: #2cabff;font-size: 22px;width: 100px;float: left;font-weight: 500;}
+        .order-top input{float: right;border: 0;background-color:#0099ff;color:#fff;padding: 6px 20px; border-radius: 5px;font-size: 16px;}
+        .order-top h2{text-align: center;font-size: 18px;font-weight: 500;padding: 30px 0 0 0;margin:30px 0 0 0;border-top: solid 1px #b2b2b2;color:#0099ff;}
+        ul li{float: left;margin:16px 0; }
+        ul li.short input.input{width: 80px;}
+        /*deliver-info*/
+        .deliver-info{float: left;padding: 30px 0 0 0;margin:30px 0 0 0;border-top: solid 1px #b2b2b2;}
+        .deliver-info ul li{float: left;}
+        /*goods-info*/
+        .goods-info{float: left;padding: 30px 0 0 0;margin:30px 0 0 0;border-top: solid 1px #b2b2b2;}
+        .goods-info div.p-float{height: 30px;}
+        .goods-info div.p-float span{margin: 0 30px;float: right;height: 28px;;line-height: 28px;overflow: hidden;}
+        span.short input.input{width: 80px;}
+        .goods-info input.button{border: 0;background-color:#81ce1c;color:#fff;padding: 5px 16px; border-radius: 5px;font-size: 16px;}
+        /*table*/
+        table{width: 100%;margin: 25px auto;}
+        table thead tr th{text-align: center;background-color: #b2dffd;border: solid 1px #666;width: 130px;line-height: 26px;height: 26px;overflow: hidden;}
+        table tbody tr td{text-align: center;border: solid 1px #666;width: 130px;line-height: 26px;height: 26px;overflow: hidden;background-color: #eee;}
+        table tbody tr.even td{background-color:#fff;}
+        span.topicon{vertical-align:super; font-size:10px;}
+
+        .city-delivery-info{float: left;}
+        .city-delivery-info{float: left;padding: 30px 0 0 0;margin:30px 0 0 0;border-top: solid 1px #b2b2b2;}
+        div.table.table-bordered.table-hover{clear: both;}
+
+        .logistics-info{float: left;padding: 30px 0 0 0;margin:30px 0 ;border-top: solid 1px #b2b2b2;}
+
+        .operate-order{clear: both;height: 50px;display: block;text-align: center;margin: 20px auto;}
+        .operate-order input{width: 10%;border: 0;background-color:#0099ff;color:#fff;padding: 5px 16px; border-radius: 5px;font-size: 16px;}
+    </style>
+</head>
+  <div class="order-items">
+      <div class="order-top">
+        <h1>订单详情</h1>
+         <input class="button" type="button" alt="back" value="返回"/><br/>
+          <h2>订单编号：201604120002259</h2>
+      </div><!--
+
+    --><div class="receipt-info">
+            <h3>发货客户信息</h3>
+            <ul>
+                <li><div class="colon">企业名称：</div><input type="text" class="input" value="中山市美的灯饰有限公司" /></li>
+                <li><div class="colon">发货人：</div><input type="text" class="input" value="张三"/></li>
+                <li><div class="colon">通讯地址：</div><input type="text" class="input"  value="中山市古镇镇东兴路同益工业园区"/></li>
+                <li><div class="colon">服务电话：</div><input type="text" class="input"  value="15876290458/0760-85296312"/></li>
+                <li><div class="colon">仓库名称：</div><input type="text" class="input"  value="总部-成品仓"/></li>
+                <li><div class="colon">仓库地址：</div><input type="text" class="input"  value="古镇镇东兴路同益工业园区"/></li>
+                <li><div class="colon">传真号码：</div><input type="text" class="input"  value="0760-85296312"/></li>
+                <li><div class="colon">单据号码：</div><input type="text" class="input"  value="201604210001"/></li>
+                <li><div class="colon">制单人：</div><input type="text" class="input"  value="张大大"/></li>
+                <li><div class="colon">电话：</div><input type="text" class="input"  value="0760-85296312"/></li>
+                <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+                <li><div class="colon">出库类别：</div><input type="text" class="input"  value=""/></li>
+                <li><div class="colon">营业员：</div><input type="text" class="input"  value=""/></li>
+                <li><div class="colon">电话：</div><input type="text" class="input"  value="0760-85296312"/></li>
+                <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+            </ul><br/>
+    </div><!--
+
+    -->
+    <div class="deliver-info">
+           <h3>收货客户信息</h3>
+        <ul>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value="美凯龙有限公司"/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value="王小"/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value="15018541236"/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value="湖南省长沙市明安区北中路72号"/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+        </ul><br/>
+    </div><!--
+
+    --><div class="goods-info">
+            <h3>企业货物信息</h3>
+            <div class="p-float">
+                <span>订单状态：<input type="button" class="button"  value="物流详情"/></span>
+                <span class="short">单据日期：<input type="text" class="input"  value="2016-04-12"/></span>
+            </div>
+
+      <div class="table table-bordered table-hover" contenteditable="false">
+          <table>
+              <thead>
+              <tr>
+                  <th>产品条码</th>
+                  <th>型号</th>
+                  <th>产品名称</th>
+                  <th>产品描述</th>
+                  <th>单位</th>
+                  <th>货位</th>
+                  <th>数量</th>
+                  <th>体积(M<span class="topicon">3</span>)</th>
+                  <th>备注</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>8501006671</td>
+                  <td>HY-DDB451</td>
+                  <td>荷叶灯</td>
+                  <td>114W,3000K</td>
+                  <td>PCS</td>
+                  <td>110-101</td>
+                  <td>10</td>
+                  <td>10</td>
+                  <td>3月老品</td>
+              </tr>
+              <tr class="even">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr><tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr><tr class="even">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr><tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+        <ul>
+            <li><div class="colon">合计：</div><input type="text" class="input"  value=""/></li>
+            <li><div class="colon">大写：</div><input type="text" class="input"  value=""/></li>
+            <li><div class="colon">币种：</div><input type="text" class="input"  value=""/></li>
+            <li><div class="colon">结算方式：</div><input type="text" class="input"  value=""/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+         </ul><br/>
+        </div><!--
+
+    --><div class="city-delivery-info">
+            <h3>同城配送信息</h3>
+      <ul>
+          <li><div class="colon">承运人：</div><input type="text" class="input"  value="王五"/></li>
+          <li><div class="colon">联系电话：</div><input type="text" class="input"  value="13822700000"/></li>
+          <li><div class="colon">同城配送单据号码：</div><input type="text" class="input"  value="5808152"/></li>
+          <li><div class="colon">车型：</div><input type="text" class="input"  value="江铃4米6"/></li>
+          <li><div class="colon">车牌号：</div><input type="text" class="input"  value="粤T00000"/></li>
+          <li><div class="colon">起始地：</div><input type="text" class="input"  value="中山古镇"/></li>
+          <li><div class="colon">目的地：</div><input type="text" class="input"  value="湖南长沙"/></li>
+          <li><div class="colon">同城接单时间：</div><input type="text" class="input"  value="2016-04-12 14:52:30"/></li>
+          <li><div class="colon">交付专线时间：</div><input type="text" class="input"  value="2016-04-12 16:30:30"/></li>
+          <li><div class="colon">同城时间：</div><input type="text" class="input"  value="98分钟"/></li>
+          <li class="short"><div class="colon">承运内容：</div><input type="text" class="input"  value="共计10件"/>
+              <input type="text" class="input"  value="共计20方"/>
+              <input type="text" class="input"  value="共计100公斤"/></li>
+          <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+          <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+          <li><div class="colon">是否需要装卸：</div><input type="text" class="input"  value=""/></li>
+          <li><div class="colon">是否需要回单：</div><input type="text" class="input"  value=""/></li>
+          <li><div class="colon">备注：</div><input type="text" class="input"  value="桂K189004米20（方）"/></li>
+          <li><div class="colon">代收货款（元）：</div><input type="text" class="input"  value=""/></li>
+          <li><div class="colon">货款申报价值（元）：</div><input type="text" class="input"  value=""/></li>
+          <li><div class="colon">汇款方式：</div><input type="text" class="input"  value=""/></li>
+      </ul>
+        <div class="p-float"></div>
+      <div class="table table-bordered table-hover" contenteditable="false">
+          <table>
+              <thead>
+              <tr>
+                  <th>货物名称</th>
+                  <th>包装</th>
+                  <th>件数</th>
+                  <th>体积（M<span class="topicon">3</span>）</th>
+                  <th>重量（KG）</th>
+                  <th>运费（元）</th>
+                  <th>装卸费</th>
+                  <th>保价</th>
+                  <th>其他费用</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>荷叶灯</td>
+                  <td>纸箱</td>
+                  <td>10</td>
+                  <td>10</td>
+                  <td>100</td>
+                  <td>150</td>
+                  <td>0</td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr class="even">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr><tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr><tr class="even">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr><tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+     </div><!--
+
+    --><div class="logistics-info">
+            <h3>物流专线信息</h3>
+        <ul>
+            <li><div class="colon">承运托运部：</div><input type="text" class="input"  value="智通物流"/></li>
+            <li><div class="colon">物流专线单据号码：</div><input type="text" class="input"  value="580815221254652"/></li>
+            <li><div class="colon">承运人：</div><input type="text" class="input"  value="老李"/></li>
+            <li><div class="colon">联系电话：</div><input type="text" class="input"  value="13822700000"/></li>
+            <li><div class="colon">专线接单时间：</div><input type="text" class="input"  value="2016-04-12 14:52:30"/></li>
+            <li><div class="colon">交付经销商时间：</div><input type="text" class="input"  value="2016-04-12 16:30:30"/></li>
+            <li><div class="colon">专线时间：</div><input type="text" class="input"  value="4天"/></li>
+            <li class="short"><div class="colon">承运内容：</div><input type="text" class="input"  value="共计10件"/>
+                <input type="text" class="input"  value="共计20方"/>
+                <input type="text" class="input"  value="共计100公斤"/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+            <li><div class="colon">其他：</div><input type="text" class="input"  value=""/></li>
+        </ul>
+      <div class="p-float"></div>
+      <div class="table table-bordered table-hover" contenteditable="false">
+          <table>
+              <thead>
+              <tr>
+                  <th>货物名称</th>
+                  <th>包装</th>
+                  <th>件数</th>
+                  <th>体积（M<span>3</span>>）</th>
+                  <th>重量（KG）</th>
+                  <th>计件数</th>
+                  <th>提货方式</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>荷叶灯</td>
+                  <td>纸箱</td>
+                  <td>10</td>
+                  <td>10</td>
+                  <td>100</td>
+                  <td>150</td>
+                  <td>自提</td>
+              </tr>
+              <tr class="even">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr class="even">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+      <div class="p-float"></div>
+      <div class="table table-bordered table-hover" contenteditable="false">
+          <table>
+              <thead>
+              <tr>
+                  <th>记方运费（元）</th>
+                  <th>记重运费（元）</th>
+                  <th>计件运费（元）</th>
+                  <th>发货金额（元）</th>
+                  <th>保险费3/000</th>
+                  <th>结算方式</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>850.00</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr class="even">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr><tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr><tr class="even">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr><tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+     </div><!--
+
+    --><div class="operate-order">
+        <input class="button" type="button" alt="modify-" value="修改订单" />
+        <input class="button" type="button" alt="pause" value="暂停订单" />
+        <input class="button" type="button" alt="start" value="启动订单" />
+        <input class="button" type="button" alt="cancel" value="取消订单" />
+     </div>
+
+   </div><!--
+
+    -->
+</body>
+</html>
