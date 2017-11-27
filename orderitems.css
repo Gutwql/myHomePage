@@ -1,0 +1,70 @@
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+body{background:rgb(250,250,250);font-family: "Microsoft YaHei";}
+a,a:hover{color:#333;}
+li{text-align: right;display:inline-table;}
+.input{
+    background-color: transparent;
+    border: none;
+    border-bottom:#333 solid 1px;
+    outline: none;
+    text-align: left;
+    width: 240px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 100;
+    margin-left: 2px;
+}
+div.colon{text-align:right;width:140px;display:inline-block;}
+h3{color: #ff1a30;width: auto;margin: 5px 0;font-size: 16px;font-weight: 500;}
+
+/*order-items*/
+/*order-top*/
+.order-items{background-color: #fff;max-width: 1150px;margin:10px auto;color:#333;font-size: 14px;}
+.order-top{padding-top: 1px;}
+.order-items h1{color: #2cabff;font-size: 22px;width: 100px;float: left;font-weight: 500;}
+.order-top input{float: right;border: 0;background-color:#0099ff;color:#fff;padding: 6px 20px; border-radius: 5px;font-size: 16px;}
+.order-top h2{text-align: center;font-size: 18px;font-weight: 500;padding: 30px 0 0 0;margin:30px 0 0 0;border-top: solid 1px #b2b2b2;color:#0099ff;}
+ul li{float: left;margin:16px 0; }
+ul li.short input.input{width: 80px;}
+/*deliver-info*/
+.deliver-info{float: left;padding: 30px 0 0 0;margin:30px 0 0 0;border-top: solid 1px #b2b2b2;}
+.deliver-info ul li{float: left;}
+/*goods-info*/
+.goods-info{float: left;padding: 30px 0 0 0;margin:30px 0 0 0;border-top: solid 1px #b2b2b2;}
+.goods-info div.p-float{height: 30px;}
+.goods-info div.p-float span{margin: 0 30px;float: right;height: 28px;;line-height: 28px;overflow: hidden;}
+span.short input.input{width: 80px;}
+.goods-info input.button{border: 0;background-color:#81ce1c;color:#fff;padding: 5px 16px; border-radius: 5px;font-size: 16px;}
+/*table*/
+table{width: 100%;margin: 25px auto;}
+table thead tr th{text-align: center;background-color: #b2dffd;border: solid 1px #666;width: 130px;line-height: 26px;height: 26px;overflow: hidden;}
+table tbody tr td{text-align: center;border: solid 1px #666;width: 130px;line-height: 26px;height: 26px;overflow: hidden;background-color: #eee;}
+table tbody tr.even td{background-color:#fff;}
+span.topicon{vertical-align:super; font-size:10px;}
+
+.city-delivery-info{float: left;}
+.city-delivery-info{float: left;padding: 30px 0 0 0;margin:30px 0 0 0;border-top: solid 1px #b2b2b2;}
+div.table.table-bordered.table-hover{clear: both;}
+
+.logistics-info{float: left;padding: 30px 0 0 0;margin:30px 0 ;border-top: solid 1px #b2b2b2;}
+
+.operate-order{clear: both;height: 50px;display: block;text-align: center;margin: 20px auto;}
+.operate-order input{width: 10%;border: 0;background-color:#0099ff;color:#fff;padding: 5px 16px; border-radius: 5px;font-size: 16px;}
