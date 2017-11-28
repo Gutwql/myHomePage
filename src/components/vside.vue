@@ -1,27 +1,32 @@
 <template>
-
-    <el-menu :default-openeds="[]">
+  <el-aside class="el-aside">
+    <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
+      <el-radio-button :label="false">展开</el-radio-button>
+      <el-radio-button :label="true">收起</el-radio-button>
+    </el-radio-group>
+    <el-menu @open="handleOpen" @close="handleClose" class="el-menu-vertical" :collapse="isCollapse" :unique-opened="true">
       <!--导航-->
-      <el-submenu  v-for="(value, key) in navData" :index="key.toString()" :key="this">
+      <el-submenu class="el-submenu"  v-for="(value, key) in navData" :index="key.toString()" :key="this">
         <!--导航标题-->
-        <template slot="title"><i :class="menuClass(key)"></i>{{value.submenu}}</template>
+        <template slot="title"><i :class="menuClass(key)"></i><span slot="title">{{value.submenu}}</span></template>
         <!--分组1-->
         <el-menu-item-group v-if="value.submenu !== 'Reading'">
           <!--分组标题-->
-          <template slot="title">{{value.submenu}}</template>
-          <el-menu-item v-for="(value1, key1) in value.nav_item" :index="key+'-'+key1" :key="this">{{value1.name||value1}}</el-menu-item>
+          <span slot="title">{{value.submenu}}</span>
+          <el-menu-item v-for="(value1, key1) in value.nav_item" :index="key+'-'+key1" :key="this" :title.sync="value1.name||value1">{{value1.name||value1}}</el-menu-item>
         </el-menu-item-group>
         <!--分组2-n-->
         <el-submenu v-else v-for="(value1, key1) in value.nav_item" :index="key+'-'+key1" :key="this">
-          <template slot="title">{{value1.status | readStatus}}</template>
-          <el-menu-item v-for="(value2, key2) in value1.items" :index="key+'-'+key1+'-'+key2" :key="this">{{value2.name}}</el-menu-item>
+          <span slot="title">{{value1.status | readStatus}}</span>
+          <el-menu-item v-for="(value2, key2) in value1.items" :index="key+'-'+key1+'-'+key2" :key="this" :title.sync="value2.name">{{value2.name}}</el-menu-item>
         </el-submenu>
       </el-submenu>
     </el-menu>
-
+  </el-aside>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   data () {
     return {
@@ -79,7 +84,7 @@ export default {
         }, {
           submenu: 'Contact',
           nav_item: [
-            { name: '微博关注我', router: '#' },
+            { name: '关注我', router: '#' },
             { name: 'more', router: '#' }]
         }
       ],
@@ -100,7 +105,16 @@ export default {
           default:
             return 'el-icon-message'
         }
-      }
+      },
+      isCollapse: false
+    }
+  },
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath)
     }
   },
   filters: {
@@ -122,5 +136,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .el-aside{
+    overflow: inherit;
+  }
+  .el-menu-vertical:not(.el-menu--collapse) {
+    width: 200px;
+    min-height: 400px;
+  }
 </style>

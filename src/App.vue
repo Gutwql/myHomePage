@@ -8,9 +8,7 @@
         </div>
       </el-header>
       <el-container>
-        <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-          <vSide></vSide>
-        </el-aside>
+        <vSide></vSide>
         <el-main></el-main>
       </el-container>
     </el-container>
