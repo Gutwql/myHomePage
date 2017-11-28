@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # myhomepage
 
 > A Vue.js project
@@ -30,5 +29,5 @@ npm test
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 =======
-# html-css-learning-
->>>>>>> bf417a11c50405bef9bdbbb9d37c6edab03f749b
+# myHomePage
+bf417a11c50405bef9bdbbb9d37c6edab03f749b
